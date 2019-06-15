@@ -17,6 +17,7 @@
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+  <!-- Vueコンポーネント呼び出し場所 -->
   <div id="app"></div>
 </body>
 </html>
