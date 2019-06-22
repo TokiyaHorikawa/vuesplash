@@ -12,7 +12,18 @@
         @click="tab = 2"
       >Register</li>
     </ul>
-    {{ tab }}
+    <div class="panel1" v-show="tab === 1">
+      <form class="form">
+        <label type="login-email">Email</label>
+        <input type="text" class="form__item" id="logi-email">
+        <label for="login-password">Password</label>
+        <input type="password" class="form__item" id="login-password">
+        <div class="form__button">
+          <button type="submit" class="button button--inverse">login</button>
+        </div>
+      </form>
+      </div>
+    <div class="panel2" v-show="tab === 2">Register Form</div>
   </div>
 </template>
 
@@ -20,7 +31,11 @@
 export default {
   data() {
     return {
-      tab: 1
+      tab: 1,
+      loginForm: {
+        email: '',
+        password: '',
+      }
     }
   }
 }
