@@ -13,11 +13,11 @@
       >Register</li>
     </ul>
     <div class="panel1" v-show="tab === 1">
-      <form class="form">
+      <form class="form" @submit.prevent="login">
         <label type="login-email">Email</label>
-        <input type="text" class="form__item" id="logi-email">
+        <input type="text" class="form__item" id="logi-email" v-model="loginForm.email">
         <label for="login-password">Password</label>
-        <input type="password" class="form__item" id="login-password">
+        <input type="password" class="form__item" id="login-password" v-model="loginForm.password">
         <div class="form__button">
           <button type="submit" class="button button--inverse">login</button>
         </div>
@@ -36,6 +36,11 @@ export default {
         email: '',
         password: '',
       }
+    }
+  },
+  methods: {
+    login () {
+      console.log(this.loginForm)
     }
   }
 }
