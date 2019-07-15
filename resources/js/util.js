@@ -1,3 +1,5 @@
+import Axios from "axios";
+
 /**
  * クッキーの値を取得する
  * @param {String} searchKey 検索するキー
